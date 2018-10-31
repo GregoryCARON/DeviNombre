@@ -26,26 +26,36 @@ function Jeu() {
     if (NombreJoueur > 100){
         document.getElementById('resultat').innerHTML = "Gros teubé, on a dit entre 1 et 100 :";
     }
-    if (vie === 0) {
-        document.getElementById('resultat').innerHTML = "Vous n'avez plus de vie<br><br>";
-        return "Vous n'avez plus de vie<br><br>";
-    } else {
-        console.log(NombreCPU + " / " + NombreJoueur);
-        if (NombreJoueur > NombreCPU) {
-            vie--;
-            document.getElementById('resultat').innerHTML = "Veuillez choisir un nombre plus petit.";
-            return "Veuillez choisir un nombre plus petit.";
+
+    if(NombreJoueur>0 && NombreJoueur<101) {
+        if (vie === 0) {
+            document.getElementById('resultat').innerHTML = "Vous n'avez plus de vie<br><br>";
+            return "Vous n'avez plus de vie<br><br>";
+        } else {
+            console.log(NombreCPU + " / " + NombreJoueur);
+            if (NombreJoueur > NombreCPU) {
+                vie--;
+                document.getElementById('resultat').innerHTML = "Veuillez choisir un nombre plus petit.";
+                return "Veuillez choisir un nombre plus petit.";
+            }
+            if (NombreJoueur < NombreCPU) {
+                vie--;
+                document.getElementById('resultat').innerHTML = "Veuillez choisir un nombre plus grand.";
+                return "Veuillez choisir un nombre plus grand.";
+            }
+            if (NombreJoueur == NombreCPU) {
+                document.getElementById('resultat').innerHTML = "Vous avez gagné !";
+                return "Vous avez gagné !";
+            }
         }
-        if (NombreJoueur < NombreCPU) {
-            vie--;
-            document.getElementById('resultat').innerHTML = "Veuillez choisir un nombre plus grand.";
-            return "Veuillez choisir un nombre plus grand.";
-        }
-        if (NombreJoueur == NombreCPU) {
-            document.getElementById('resultat').innerHTML = "Vous avez gagné !";
-            return "Vous avez gagné !";
-        }
+
+
+    }else{
+
     }
+
+
+
 }
 
 document.getElementById('btn').addEventListener('click', function() {
