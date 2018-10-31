@@ -6,25 +6,23 @@ function zero(){
     NombreJoueur = 0;
     NombreCPU = 0;
     vie = 10;
-    document.getElementById('Champs').value = '';
+    document.getElementById('champs').value = '';
 }
+
 function CPUNumber() {
     if (NombreCPU === 0) {
-        NombreCPU = Math.round(Math.random() * 100 +1);
+        NombreCPU = Math.round(Math.random() * 100 + 1);
     }
 }
 
-
-
-
 document.getElementById('btn').addEventListener('click', function() {
-    NombreCPU = CPUNumber();
+    CPUNumber();
     NombreJoueur = document.getElementById('champs').value;
     if (vie === 0) {
         document.getElementById('resultat').innerHTML = "Vous n'avez plus de vie<br><br>";
         return "Vous n'avez plus de vie<br><br>";
     } else {
-        console.log(NombreCPU);
+        console.log(NombreCPU + " / " + NombreJoueur);
         if (NombreJoueur > NombreCPU) {
             vie--;
             document.getElementById('resultat').innerHTML = "Veuillez choisir un nombre plus petit.";
@@ -35,22 +33,9 @@ document.getElementById('btn').addEventListener('click', function() {
             document.getElementById('resultat').innerHTML = "Veuillez choisir un nombre plus grand.";
             return "Veuillez choisir un nombre plus grand.";
         }
-        if (NombreJoueur === NombreCPU) {
+        if (NombreJoueur == NombreCPU) {
             document.getElementById('resultat').innerHTML = "Vous avez gagné !";
             return "Vous avez gagné !";
         }
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
