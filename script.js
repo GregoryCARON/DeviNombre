@@ -15,9 +15,17 @@ function CPUNumber() {
     }
 }
 
-document.getElementById('btn').addEventListener('click', function() {
+
+
+function Jeu() {
     CPUNumber();
     NombreJoueur = document.getElementById('champs').value;
+    if (NombreJoueur < 1){
+        document.getElementById('resultat').innerHTML = "Gros teubé, on a dit entre 1 et 100 :";
+    }
+    if (NombreJoueur > 100){
+        document.getElementById('resultat').innerHTML = "Gros teubé, on a dit entre 1 et 100 :";
+    }
     if (vie === 0) {
         document.getElementById('resultat').innerHTML = "Vous n'avez plus de vie<br><br>";
         return "Vous n'avez plus de vie<br><br>";
@@ -37,5 +45,18 @@ document.getElementById('btn').addEventListener('click', function() {
             document.getElementById('resultat').innerHTML = "Vous avez gagné !";
             return "Vous avez gagné !";
         }
+    }
+}
+
+document.getElementById('btn').addEventListener('click', function() {
+    Jeu();
+});
+
+
+document.getElementById('champs').addEventListener('keydown', (event) => {
+    const keyName = event.key;
+    /*console.log('Touche : ' + keyName);*/
+    if (keyName == 'Enter') {
+        Jeu();
     }
 });

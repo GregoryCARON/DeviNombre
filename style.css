@@ -2,4 +2,8 @@
     position: absolute;
     top: 500px;
     left: 500px;
+
+}
+#champs {
+    border: blue 2px double;
 }
