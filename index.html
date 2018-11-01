@@ -7,17 +7,25 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <input type="text" id="champs" placeholder="Entrez un nombre en 1 et 100">
-        <button id="btn">Jouer</button>
-        <button id="RaZ" onclick="zero()">RaZ</button>
+    <div id="contenu">
+        <h1>DeviNombre</h1>
+    </div>
+    <div id="contenu">
+        <p>&emsp;La règle est simple : Devinez un nom entre <strong>1</strong> et <strong>100</strong> ! Pour celà vous avez 10 tentative. Bonne chance !</p>
+    </div>
+    <div id="contenu">
+        <input type="text" id="champs" size="40" maxlength="3" placeholder="Entrez un nombre en 1 et 100"><br>
+    </div>
+        <div id="contenu">
+        <button id="btn">Jouer</button><button id="RaZ" onclick="zero()">RaZ</button>
+    </div>
+    <div id="contenu">
+        <div id="resultat"></div>
+
+        <div id="statut"></div>
 
 
-<div id="resultat"></div>
-
-<div id="statut"></div>
-
-
-
+    </div>
 
         <script src="script.js"></script>
     </body>

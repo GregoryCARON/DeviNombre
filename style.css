@@ -6,4 +6,11 @@
 }
 #champs {
     border: blue 2px double;
+    width: 120px;
+}
+
+#contenu {
+    display: Flex;
+    justify-content: center;
+    align-content: center;
 }
