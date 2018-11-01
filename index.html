@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <title>DeviNombre</title>
-
         <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
     </head>
     <body>
-    <div id="contenu">
+    <div class="contenu">
         <h1>DeviNombre</h1>
     </div>
-    <div id="contenu">
+    <div class="contenu">
         <p>&emsp;La règle est simple : Devinez un nom entre <strong>1</strong> et <strong>100</strong> ! Pour celà vous avez 10 tentative. Bonne chance !</p>
     </div>
-    <div id="contenu">
-        <input type="text" id="champs" size="40" maxlength="3" placeholder="Entrez un nombre en 1 et 100"><br>
+    <div class="contenu">
+        <input type="tel" id="champs" size="40" maxlength="3" placeholder="Entrez un nombre en 1 et 100" autofocus><br>
     </div>
-        <div id="contenu">
+    <div class="contenu">
         <button id="btn">Jouer</button><button id="RaZ" onclick="zero()">RaZ</button>
     </div>
-    <div id="contenu">
+    <div class="contenu">
         <div id="resultat"></div>
-
-        <div id="statut"></div>
-
-
     </div>
-
-        <script src="script.js"></script>
+    <div class="contenu">
+        <div id="statut"></div>
+    </div>
+    <script src="script.js"></script>
     </body>
 </html>

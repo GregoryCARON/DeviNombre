@@ -1,16 +1,25 @@
 #resultat {
-    position: absolute;
-    top: 500px;
-    left: 500px;
-
+    font-size: 20px;
+    text-align: center;
 }
 #champs {
-    border: blue 2px double;
-    width: 120px;
+    border: blue 2px solid;
+    border-radius: 5px;
+    width: 50%;
+    margin: 10px;
+    padding: 2rem;
+    font-size: 2rem;
 }
 
-#contenu {
+.contenu {
     display: Flex;
     justify-content: center;
     align-content: center;
+}
+#btn {
+    margin: 5px;
+
+}
+#RaZ {
+    margin: 5px;
 }

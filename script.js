@@ -10,6 +10,7 @@ function zero(){
     document.getElementById('champs').disabled = false;
     document.getElementById('champs').value = '';
     document.getElementById('statut').innerHTML = vie;
+    document.getElementById('champs').focus();
 }
 function CPUNumber() {
     if (NombreCPU === 0) {
@@ -23,30 +24,32 @@ function Jeu() {
         if (NombreJoueur > 0 && NombreJoueur < 101) {
             if (vie === 0) {
                 document.getElementById('champs').disabled = true;
-                document.getElementById('resultat').innerHTML = "Vous n'avez plus de vie<br><br>";
+                document.getElementById('resultat').innerHTML = 'Vous n\'avez plus de vie';
             } else {
                 console.log(NombreCPU + " / " + NombreJoueur);
                 if (NombreJoueur > NombreCPU) {
                     vie--;
-                    document.getElementById('resultat').innerHTML = "Veuillez choisir un nombre plus petit.";
-                    document.getElementById('statut').innerHTML = vie;
+                    document.getElementById('resultat').innerHTML = 'Veuillez choisir un nombre plus petit.';
+                    document.getElementById('statut').innerHTML = vie + ' restante(s).';
                 }
                 if (NombreJoueur < NombreCPU) {
                     vie--;
-                    document.getElementById('resultat').innerHTML = "Veuillez choisir un nombre plus grand.";
-                    document.getElementById('statut').innerHTML = vie;
+                    document.getElementById('resultat').innerHTML = 'Veuillez choisir un nombre plus grand.';
+                    document.getElementById('statut').innerHTML = vie + ' restante(s).';
                 }
                 if (NombreJoueur == NombreCPU) {
                     vie--;
-                    document.getElementById('statut').innerHTML = vie;
-                    document.getElementById('resultat').innerHTML = "Vous avez gagné !";
+                    document.getElementById('statut').innerHTML = vie + ' restante(s).';
+                    document.getElementById('resultat').innerHTML = 'Vous avez gagné !';
                     win = true;
                 }
             }
         } else {
-            document.getElementById('resultat').innerHTML = "Gros teubé, on a dit entre 1 et 100 :";
+            document.getElementById('resultat').innerHTML = 'Gros teubé, on a dit entre 1 et 100 :';
         }
     }
+    document.getElementById('champs').value ='';
+    document.getElementById('champs').focus();
 }
 document.getElementById('btn').addEventListener('click', function() {
     Jeu();
@@ -56,6 +59,5 @@ document.getElementById('champs').addEventListener('keydown', (event) => {
     /*console.log('Touche : ' + keyName);*/
     if (keyName == 'Enter') {
         Jeu();
-        document.getElementById('champs').value ='';
     }
 });
