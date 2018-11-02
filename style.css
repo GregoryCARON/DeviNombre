@@ -1,9 +1,17 @@
 body {
     background-color: lemonchiffon;
     background-image: url('background.jpg');
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: auto;
     margin: 0 auto;
     color: white;
+}
+@media (max-width: 1080px) {
+    body {
+        background-image: url('background-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
 }
 h1 {
     text-shadow: 1px 1px 3px blue;
