@@ -69,8 +69,15 @@ document.getElementById('btn').addEventListener('click', function() {
 });
 document.getElementById('champs').addEventListener('keydown', (event) => {
     const keyName = event.key;
-    /*console.log('Touche : ' + keyName);*/
-    if (keyName == 'Enter') {
-        Jeu();
+    switch(keyName) {
+        case 'Enter':
+            Jeu();
+            break;
+        case 'Delete':
+            zero();
+            break;
+        default:
+            console.log('Touche : ' + keyName);
+            break;
     }
 });
