@@ -17,8 +17,20 @@ function zero(){
     document.getElementById('numtour').innerHTML = '';
     document.getElementById('champs').disabled = false;
     document.getElementById('champs').value = '';
-    document.getElementById('statut').innerHTML = vie;
+    document.getElementById('statut').innerHTML = vie + ' vie'+ plusieurs(vie) + ' restante' + plusieurs(vie);
     document.getElementById('champs').focus();
+}
+function demarrer() {
+    document.getElementById('global').style.display = 'Block';
+    document.getElementById('start').style.display ='none';
+    zero();
+}
+function plusieurs(quantity) {
+    if (quantity > 1) {
+        return 's';
+    } else {
+        return '';
+    }
 }
 function CPUNumber() {
     if (NombreCPU === 0) {
@@ -34,20 +46,20 @@ function Jeu() {
                 document.getElementById('champs').disabled = true;
                 document.getElementById('resultat').innerHTML = 'Vous n\'avez plus de vie';
             } else {
-                console.log(NombreCPU + " / " + NombreJoueur);
+                /* console.log('Choix CPU : ' + NombreCPU + ' / Choix Joueur : ' + NombreJoueur); */
                 if (NombreJoueur > NombreCPU) {
                     vie--;
                     document.getElementById('resultat').innerHTML = 'Veuillez choisir un nombre plus petit.';
-                    document.getElementById('statut').innerHTML = vie + ' restante(s).';
+                    document.getElementById('statut').innerHTML = vie + ' vie'+ plusieurs(vie) + ' restante' + plusieurs(vie);
                 }
                 if (NombreJoueur < NombreCPU) {
                     vie--;
                     document.getElementById('resultat').innerHTML = 'Veuillez choisir un nombre plus grand.';
-                    document.getElementById('statut').innerHTML = vie + ' restante(s).';
+                    document.getElementById('statut').innerHTML = vie + ' vie'+ plusieurs(vie) + ' restante' + plusieurs(vie);
                 }
                 if (NombreJoueur == NombreCPU) {
                     vie--;
-                    document.getElementById('statut').innerHTML = vie + ' restante(s).';
+                    document.getElementById('statut').innerHTML = vie + ' vie'+ plusieurs(vie) + ' restante' + plusieurs(vie);
                     document.getElementById('resultat').innerHTML = 'Vous avez gagné !';
                     win = true;
                 }

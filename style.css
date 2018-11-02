@@ -3,6 +3,11 @@ body {
     background-image: url('background.jpg');
     background-size: cover;
     margin: 0 auto;
+    color: white;
+}
+h1 {
+    text-shadow: 1px 1px 3px blue;
+    font-size: 35px;
 }
 #resultat {
     font-size: 20px;
@@ -17,9 +22,7 @@ body {
     padding: 2rem;
     font-size: 2rem;
     color:darkviolet;
-
 }
-
 .contenu {
     display: Flex;
     justify-content: center;
@@ -78,4 +81,22 @@ body {
 
 .tours {
     height: auto;
+}
+#global {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+#start {
+    display: Flex;
+    justify-content: center;
+    justify-items: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 200px;
 }
