@@ -14,7 +14,7 @@
         <p>&emsp;La règle est simple : Devinez un nom entre <strong>1</strong> et <strong>100</strong> ! Pour celà vous avez 10 tentative. Bonne chance !</p>
     </div>
     <div class="contenu">
-        <input type="tel" id="champs" size="40" maxlength="3" placeholder="Entrez un nombre en 1 et 100" autofocus><br>
+        <input type="tel" id="champs" class="bouton" size="40" maxlength="3" placeholder="Entrez un nombre en 1 et 100" autofocus><br>
     </div>
     <div class="contenu">
         <button id="btn" class="bouton">Jouer</button><button id="RaZ" class="bouton" onclick="zero()">RaZ</button>
@@ -24,6 +24,10 @@
     </div>
     <div class="contenu">
         <div id="statut"></div>
+    </div>
+    <div class="contenu2">
+        <div id="tour" class="tours"></div>
+        <div id="numtour" class="tours"></div>
     </div>
     <script src="script.js"></script>
     </body>

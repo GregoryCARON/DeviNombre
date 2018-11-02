@@ -2,11 +2,18 @@ let NombreJoueur = 0;
 let NombreCPU = 0;
 let vie = 10;
 let win = false;
+let cacheTour = 0;
+let cacheTourT = '';
+let cacheNombreJoueur = '';
 function zero(){
     NombreJoueur = 0;
     NombreCPU = 0;
     vie = 10;
     win = false;
+    cacheTour = '';
+    cacheNombreJoueur = '';
+    document.getElementById('tour').innerText = '';
+    document.getElementById('numtour').innerHTML = '';
     document.getElementById('champs').disabled = false;
     document.getElementById('champs').value = '';
     document.getElementById('statut').innerHTML = vie;
@@ -44,6 +51,11 @@ function Jeu() {
                     win = true;
                 }
             }
+            cacheTour++;
+            cacheTourT = cacheTourT + 'Essai ' + cacheTour + '<br>';
+            cacheNombreJoueur = cacheNombreJoueur + NombreJoueur + '<br>';
+            document.getElementById('tour').innerHTML = cacheTourT;
+            document.getElementById('numtour').innerHTML = cacheNombreJoueur;
         } else {
             document.getElementById('resultat').innerHTML = 'Gros teubé, on a dit entre 1 et 100 :';
         }

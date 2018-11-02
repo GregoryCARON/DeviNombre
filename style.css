@@ -22,7 +22,20 @@ body {
     justify-content: center;
     align-content: center;
 }
-
+.contenu2 {
+    display: Flex;
+    justify-content: space-around;
+    align-content: center;
+    height: 200px;
+    margin: 5px;
+    padding: 5px 0 5px 0;
+    background-color: aqua;
+    border: 2px solid orange;
+    width:200px;
+    font:bold 13px Arial;
+    color: darkviolet;
+    box-shadow:1px 1px 3px grey;
+}
 
 .bouton {
     margin: 5px;
@@ -41,4 +54,8 @@ body {
 .bouton:active {
     background-color: orange;
     border: 2px solid aqua;
+}
+
+.tours {
+    height: auto;
 }
