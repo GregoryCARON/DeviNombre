@@ -10,9 +10,10 @@ function zero(){
     NombreCPU = 0;
     vie = 10;
     win = false;
-    cacheTour = '';
+    cacheTour = 0;
+    cacheTourT = '';
     cacheNombreJoueur = '';
-    document.getElementById('tour').innerText = '';
+    document.getElementById('tour').innerHTML = '';
     document.getElementById('numtour').innerHTML = '';
     document.getElementById('champs').disabled = false;
     document.getElementById('champs').value = '';

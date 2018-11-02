@@ -1,5 +1,8 @@
 body {
     background-color: lemonchiffon;
+    background-image: url('background.jpg');
+    background-size: cover;
+    margin: 0 auto;
 }
 #resultat {
     font-size: 20px;
@@ -21,11 +24,28 @@ body {
     display: Flex;
     justify-content: center;
     align-content: center;
+    text-align: center;
 }
 .contenu2 {
     display: Flex;
     justify-content: space-around;
     align-content: center;
+    height: 200px;
+    margin: 5px;
+    padding: 5px 0 5px 0;
+    background-color: aqua;
+    border: 2px solid orange;
+    width:200px;
+    font:bold 13px Arial;
+    color: darkviolet;
+    box-shadow:1px 1px 3px grey;
+}
+
+.contenu3 {
+    display: Flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: column;
     height: 200px;
     margin: 5px;
     padding: 5px 0 5px 0;
