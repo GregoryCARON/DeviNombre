@@ -1,16 +1,15 @@
 body {
-    background-color: lemonchiffon;
-    background-image: url('background.jpg');
-    background-repeat: no-repeat;
+    background: lemonchiffon url('background.jpg') no-repeat fixed;
     background-size: auto;
     margin: 0 auto;
     color: white;
 }
 @media (max-width: 1080px) {
     body {
-        background-image: url('background-mobile.jpg');
-        background-repeat: no-repeat;
+        background: lemonchiffon url('background-mobile.jpg') no-repeat fixed;
         background-size: auto;
+        margin: 0 auto;
+        color: white;
     }
 }
 h1 {
