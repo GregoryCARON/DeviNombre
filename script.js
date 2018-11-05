@@ -19,6 +19,7 @@ function zero(){
     document.getElementById('champs').value = '';
     document.getElementById('statut').innerHTML = vie + ' vie'+ plusieurs(vie) + ' restante' + plusieurs(vie);
     document.getElementById('champs').focus();
+    document.getElementById('resultat').innerHTML = '';
 }
 function demarrer() {
     document.getElementById('global').style.display = 'Block';
@@ -39,13 +40,11 @@ function CPUNumber() {
 }
 function Jeu() {
     CPUNumber();
-    NombreJoueur = document.getElementById('champs').value;
+    NombreJoueur = parseInt(document.getElementById('champs').value);
     if (win === false) {
         if (NombreJoueur > 0 && NombreJoueur < 101) {
-            if (vie === 0) {
-                document.getElementById('champs').disabled = true;
-                document.getElementById('resultat').innerHTML = 'Vous n\'avez plus de vie';
-            } else {
+            if (vie > 0) {
+
                 /* console.log('Choix CPU : ' + NombreCPU + ' / Choix Joueur : ' + NombreJoueur); */
                 if (NombreJoueur > NombreCPU) {
                     vie--;
@@ -57,12 +56,18 @@ function Jeu() {
                     document.getElementById('resultat').innerHTML = 'Veuillez choisir un nombre plus grand.';
                     document.getElementById('statut').innerHTML = vie + ' vie'+ plusieurs(vie) + ' restante' + plusieurs(vie);
                 }
-                if (NombreJoueur == NombreCPU) {
+                if (NombreJoueur === NombreCPU) {
                     vie--;
                     document.getElementById('statut').innerHTML = vie + ' vie'+ plusieurs(vie) + ' restante' + plusieurs(vie);
                     document.getElementById('resultat').innerHTML = 'Vous avez gagné !';
                     win = true;
+
+                } else {
+
+                document.getElementById('champs').disabled = true;
+                document.getElementById('resultat').innerHTML = 'Vous n\'avez plus de vie';
                 }
+
             }
             cacheTour++;
             cacheTourT = cacheTourT + 'Essai ' + cacheTour + '<br>';
@@ -72,12 +77,19 @@ function Jeu() {
         } else {
             document.getElementById('resultat').innerHTML = 'Gros teubé, on a dit entre 1 et 100 :';
         }
+        alert(vie);
     }
     document.getElementById('champs').value ='';
     document.getElementById('champs').focus();
 }
 document.getElementById('btn').addEventListener('click', function() {
     Jeu();
+});
+document.getElementById('start').addEventListener('click', function() {
+   demarrer();
+});
+document.getElementById('RaZ').addEventListener('click', function() {
+    zero();
 });
 document.getElementById('champs').addEventListener('keydown', (event) => {
     const keyName = event.key;
