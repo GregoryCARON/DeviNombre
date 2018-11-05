@@ -75,6 +75,7 @@ function Jeu() {
             document.getElementById('resultat').innerHTML = 'Gros teubé, on a dit entre 1 et 100 :';
         }
     } else {
+        document.getElementById('champs').blur();
         document.getElementById('champs').disabled = true;
         document.getElementById('resultat').innerHTML = 'Vous n\'avez plus de vie';
     }
@@ -97,11 +98,19 @@ document.getElementById('champs').addEventListener('keydown', (event) => {
         case 'Enter':
             Jeu();
             break;
+        default:
+            console.log('Touche : ' + keyName);
+            break;
+    }
+});
+
+document.body.addEventListener('keydown', (event) =>{
+    const keyName = event.key;
+    switch(keyName) {
         case 'Delete':
             zero();
             break;
         default:
-            console.log('Touche : ' + keyName);
-            break;
+            //uhuh
     }
 });
