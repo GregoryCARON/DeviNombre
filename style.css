@@ -49,6 +49,7 @@ h1 {
     font: bold 13px Arial;
     color: darkviolet;
     box-shadow: 1px 1px 3px grey;
+    overflow-y: auto;
 }
 
 .contenu3 {
