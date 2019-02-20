@@ -2,72 +2,77 @@
 
 <html lang="fr">
 
-    <head>
+<head>
 
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-        <title>DeviNombre</title>
+    <title>DeviNombre</title>
 
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <div id="global">
+<div id="global">
 
-            <div class="contenu">
+    <div class="contenu">
 
-                <h1>DeviNombre</h1>
+        <h1>DeviNombre</h1>
 
-            </div>
+    </div>
 
-            <div class="contenu">
+    <div class="contenu">
 
-                <p>&emsp;La règle est simple : Devinez un nom entre <strong>1</strong> et <strong>100</strong> ! Pour celà vous avez 10 tentative. Bonne chance !</p>
+        <p id="regles">&emsp;La règle est simple : Devinez un nom entre <strong>1</strong> et <strong>100</strong> !
+            Pour celà vous
+            avez 10 tentative. Bonne chance !</p>
 
-            </div>
+    </div>
 
-            <div class="contenu">
+    <div class="contenu">
 
-                <input type="tel" id="champs" class="bouton" size="40" maxlength="3" placeholder="Entrez un nombre en 1 et 100" autofocus><br>
+        <input type="tel" id="champs" class="bouton" size="40" maxlength="3" placeholder="Entrez un nombre en 1 et 100"
+               autofocus><br>
 
-            </div>
+    </div>
 
-            <div class="contenu">
+    <div class="contenu">
 
-                <button id="btn" class="bouton">Jouer</button><button id="RaZ" class="bouton">RaZ</button>
+        <button id="btn" class="bouton">Jouer</button>
+        <button id="RaZ" class="bouton">RaZ</button>
 
-            </div>
+    </div>
 
-            <div class="contenu">
+    <div class="contenu">
 
-                <div class="contenu2">
+        <div class="contenu2">
 
-                    <div id="tour" class="tours"></div>
+            <div id="tour" class="tours"></div>
 
-                    <div id="numtour" class="tours"></div>
-
-                </div>
-
-                <div class="contenu3">
-
-                    <div id="resultat"></div>
-
-                    <div id="statut"></div>
-
-                </div>
-
-            </div>
+            <div id="numtour" class="tours"></div>
 
         </div>
 
-        <div id="start"><button class="bouton">Démarrer</button></div>
+        <div class="contenu3">
 
-        <script src="script.js"></script>
+            <div id="resultat"></div>
 
-    </body>
+            <div id="statut"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="start">
+    <button class="bouton">Démarrer</button>
+</div>
+<div id="footer">Auteur : Gregory CARON</div>
+<script src="script.js"></script>
+</body>
 
 </html>

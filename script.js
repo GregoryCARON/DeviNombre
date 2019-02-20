@@ -5,7 +5,8 @@ let win = false;
 let cacheTour = 0;
 let cacheTourT = '';
 let cacheNombreJoueur = '';
-function zero(){
+
+function zero() {
     NombreJoueur = 0;
     NombreCPU = 0;
     vie = 10;
@@ -17,15 +18,17 @@ function zero(){
     document.getElementById('numtour').innerHTML = '';
     document.getElementById('champs').disabled = false;
     document.getElementById('champs').value = '';
-    document.getElementById('statut').innerHTML = vie + ' vie'+ plusieurs(vie) + ' restante' + plusieurs(vie);
+    document.getElementById('statut').innerHTML = vie + ' vie' + plusieurs(vie) + ' restante' + plusieurs(vie);
     document.getElementById('champs').focus();
     document.getElementById('resultat').innerHTML = '';
 }
+
 function demarrer() {
     document.getElementById('global').style.display = 'Block';
-    document.getElementById('start').style.display ='none';
+    document.getElementById('start').style.display = 'none';
     zero();
 }
+
 function plusieurs(quantity) {
     if (quantity > 1) {
         return 's';
@@ -33,11 +36,13 @@ function plusieurs(quantity) {
         return '';
     }
 }
+
 function CPUNumber() {
     if (NombreCPU === 0) {
         NombreCPU = Math.round(Math.random() * 100 + 1);
     }
 }
+
 function Jeu() {
     if (vie > 0) {
         CPUNumber();
@@ -83,18 +88,19 @@ function Jeu() {
     document.getElementById('champs').focus();
     console.log(vie);
 }
-document.getElementById('btn').addEventListener('click', function() {
+
+document.getElementById('btn').addEventListener('click', function () {
     Jeu();
 });
-document.getElementById('start').addEventListener('click', function() {
-   demarrer();
+document.getElementById('start').addEventListener('click', function () {
+    demarrer();
 });
-document.getElementById('RaZ').addEventListener('click', function() {
+document.getElementById('RaZ').addEventListener('click', function () {
     zero();
 });
 document.getElementById('champs').addEventListener('keydown', (event) => {
     const keyName = event.key;
-    switch(keyName) {
+    switch (keyName) {
         case 'Enter':
             Jeu();
             break;
@@ -104,13 +110,18 @@ document.getElementById('champs').addEventListener('keydown', (event) => {
     }
 });
 
-document.body.addEventListener('keydown', (event) =>{
+document.body.addEventListener('keydown', (event) => {
     const keyName = event.key;
-    switch(keyName) {
+    switch (keyName) {
         case 'Delete':
             zero();
             break;
         default:
-            //uhuh
+        //uhuh
     }
 });
+
+document.body.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+    return false;
+}, false);
